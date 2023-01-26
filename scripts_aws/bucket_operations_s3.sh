@@ -144,8 +144,6 @@ function delete_item_in_bucket {
     fi
 }
 
-#
-
 function delete_bucket {
     db_bucketname=$1
     local RESPONSE
