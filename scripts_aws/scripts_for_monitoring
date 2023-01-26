@@ -1,0 +1,22 @@
+free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }'
+
+
+#free -m - for checking free memory available
+
+
+#for monitoring the DISK
+
+df -h | awk '$NF=="/"{printf "%s\t\t", $5}'
+
+
+
+#scripts for monitoring CPU
+
+top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}'
+
+top -bn1 | grep load
+
+
+#suppose we want to make an script for 1 hour run
+
+
